@@ -1,4 +1,4 @@
-create external table stabsumalam_db.user_pageviews
+create external table gabrielegiarratana_db.user_pageviews
 (
 email string,
 page_view bigint,
@@ -6,4 +6,4 @@ created_date date,
 last_active 'date'
 )
 stored as parquet
-location '/user/stabsumalam/pyspark-tdd-template/user_pageviews/';
+location '/user/gabrielegiarratana/dev/pyspark-cicd-template/pyspark-tdd-template/user_pageviews/';

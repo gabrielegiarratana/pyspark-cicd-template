@@ -42,9 +42,9 @@ page_views = StructType(
     ]
 )
 
-page_views_path = '/user/soyel/pyspark-cicd-template/input/page_views'
+page_views_path = '/users/gabrielegiarratana/dev/pyspark-cicd-template/input/page_views'
 user_pageviews_tab = 'soyel_db.user_pageviews'
-output_path = '/user/soyel/pyspark-cicd-template/output/user_pageviews'
+output_path = '/users/gabrielegiarratana/dev/pyspark-cicd-template/output/user_pageviews'
 
 # Extract
 inc_df: DataFrame = spark.read.csv(path=page_views_path,

@@ -54,7 +54,7 @@ def test_pipeline_extract_mock_calls(testbed: SparkETLTests):
                      logger=testbed.config)
     # Then - introspecting the spark method call
     testbed.mock_spark.read.load.assert_called_once_with(
-        path='/user/soyel/pyspark-cicd-template/input/page_views',
+        path='/users/gabrielegiarratana/dev/pyspark-cicd-template/input/page_views',
         format='csv',
         header=True,
         schema=schema.page_views)
@@ -72,7 +72,7 @@ def test_pipeline_load_mock_calls(testbed: SparkETLTests):
     pipeline.load(df=testbed.mock_df, config=testbed.config, logger=testbed.config)
     # Then - introspecting the spark method call
     testbed.mock_df.write.save.assert_called_once_with(
-        path='/user/soyel/pyspark-cicd-template/output/user_pageviews',
+        path='/users/gabrielegiarratana/dev/pyspark-cicd-template/output/user_pageviews',
         mode='overwrite')
     testbed.mock_df.reset_mock()
 
